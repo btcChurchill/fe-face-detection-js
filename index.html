@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    canvas {
+      position: absolute;
+    }
+
+    video {
+      height: 80vh;
+    width: 100%;
+}
+
+    body {
+      background-color: #f2f1ed;
+      color: #de4848;
+      padding: 10px;
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      display: block;
+      
+    }
+
+    .text {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+      /* background-color: #000; */
+      margin-top: 0;
+    }
+
+    div.text > p {
+      margin: 5px;
+      padding-top: 33px;
+    }
+
+    .text-up {
+      margin: 0;
+      padding: 0;
+      display: block;
+      height: 20vh;
+      width: 100%;
+    }
+
+    .text-up p, a, h1 {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center
+    }
+
+    @media screen and (max-width: 760px) {
+      body {
+        height: 100vh ;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+
+      video {
+        height: auto;
+        width: 100vw;
+
+      }
+
+    canvas {
+      width: 100vw;
+      height: 60vh;
+    }
+
+      .text-up p, a, h1 {
+        font-size: 15px;
+      }
+
+      .text-up {
+        height: 10vh;
+      }
+
+      .text-up p {
+        padding-top: 10px;
+      }
+
+      .text-up a {
+        font-size: 10px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="text-up">
+    <div class="text">
+      <p>&copy;</p>
+      <p id="demo"></p>
+      <p><a href="https://github.com/btcChurchill?">Click here..</a></p>
+    </div>
+    <div class="text">
+      <h1>Face Detection</h1>
+    </div>
+
+  <video id="video" width="720" height="560" autoplay muted></video>
+
+  <script>
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("demo").innerHTML = year;
+  </script>
+</body>
+</html>
